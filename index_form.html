@@ -1,0 +1,52 @@
+<!--
+    This is the HTML page for the Event Signp form using form validation , it has classes such as form-group whichs 
+    specifies the type of input to be entered in the placeholder
+-->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Form Registration</title>
+        <link rel="stylesheet" href="style_form.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Event Signup</h2>
+            <form id="registrationForm" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your Full name" required/>
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email-id" required />
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phonenumber" required maxlength="10"/>
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age *</label>
+                    <input type="number" name="age" id="age" placeholder="Enter age" required min="18"/>
+                    <small class="error-message"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Comments </label>
+                    <textarea id="comments" name="comments" placeholder="Enter comments" maxlength="200"></textarea>
+                    <small class="error-message"></small>
+                </div>
+
+                <button type="submit" id="submitBtn" disabled>Register</button>
+            </form>
+        </div>
+    </body>
+    <script src="script_form.js"></script>
+</html>
